@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@300;400;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+:root{
+    --main-alpha : #fcfcfc;
+    --main-bg : #1e272e; 
+    --main-color : #0097e6;
+}
+.alpha{
+    background-color: var(--main-alpha);
+}
+.font-100{
+    font-family: 'Piazzolla', serif;
+    font-weight: 100;
+}
+.font-400{
+    font-family: 'Piazzolla', serif;
+    font-weight: 400;
+}
+.font-900{
+    font-family: 'Piazzolla', serif;
+    font-weight: 900;
+    
+}
+
+ .navbar a {
+     font-size: 2rem;
+    }
+    .navbar a:hover {
+        color: var(--main-color)!important;
+       }   
+ .navbar li {
+    margin-left: 3rem;
+}
+.fa-snowflake{
+    transition: all linear;
+    color: var(--main-color);
+    margin:0 3px;
+    animation: rotate 2s linear infinite ;
+}
+@keyframes rotate{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+}
+.main_header_left{
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+.main_header_left p{
+  font-size: 1.5rem;
+  text-transform: capitalize;
+}
+ 
+.main_header_left button{
+    font-size: 1.4rem;
+    border: none;
+    padding: 01rem 1.8rem;
+    transition: all linear;
+    border-radius: 2rem;
+   outline: none;
+   cursor: pointer;
+    box-shadow: 0 8px 6px -6px #000;
+  }
+  .main_header_left button:hover{
+      transition: 0.5s;
+      text-transform: uppercase !important;
+    box-shadow: 0 8px 6px -6px var(--main-bg);
+    letter-spacing: 2px;
+  }  
+.main_header_left h2{
+    font-size: 2.5rem;
+    margin-left: 1rem 0 4rem 0;
+    text-transform: capitalize;
+  }
+.main_header_right{
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+/* tempreature field*/
+.temp_form{
+    width: 60%;
+    position: relative;
+    margin: 10rem auto;
+}
+.temp_form  input[type = "text"]{
+    width: 100%;
+    padding: 1rem;
+    background-color: var(--main-bg);
+    color: #fff;
+    outline: none;
+    font-size: 1.7rem;
+    border-radius: 3rem;
+}
+::placeholder{
+    color: #fff;
+}
+.temp_form input[type="submit"]{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    border: none;
+    background: var(--main-color);
+    padding: 7px 4rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    color: #fff;
+    outline: none;
+    font-size: 1.6rem;
+}
+.temp_form input[type="submit"]:hover{
+color: #0a76b1;
+background-color: #fff;
+}
+.tempInformation{
+    width: 30rem;
+    margin: auto;
+    min-height: 20rem;
+    background-color: var(--main-bg);
+    border-radius: 1rem;
+
+}
+.top_layer{
+    width: 100%;
+    height: 20%;
+    background-color: #2e3841;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 2rem 0;
+}
+.top_layer p {
+    color : #fff;
+    font-weight: 300 !important;
+    padding: 1em;
+    font-size: 1.5rem;
+
+}
+.main_layer{
+    width: 100%;
+    height:80%;
+    display:flex;
+    flex-direction: column; 
+}
+.main_layer #city_name{
+     padding: 2rem 0 ;
+     color: #bfc1c8;
+     font-weight: 300;
+     margin: 0 12px;
+     font-size: 2rem;
+}
+.main_layer .middle_layer{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+.main_layer .middle_layer p ,
+.main_layer .middle_layer .fa{
+    font-size: 5rem;
+    
+}
+ 
+.fa{
+    color : var(--main-color);
+}
+sup{
+    font-size: 6rem;
+    margin-top: -2rem;
+}
+.data_hide{
+    visibility: hidden;
+    transition:  all 0.3s linear;
+}
+/*footer*/
+footer{
+    width: 100%;
+    background-color: var(--main-bg);
+    margin-top: auto;
+    line-height: 3rem;
+}
+footer p {
+    color: #fff;
+    text-align: center;
+    font-size: 1.5rem;
+   
+}
+.error{
+    display: flex;
+    justify-content: center !important;
+    align-items: flex-start;
+
+}
+
+/* Resposive code */
+
+@media (max-width : 760px){
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+    }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>headerlinks}}
+
+<body>
+    <!--navbar-->
+    {{>navbar}}
+
+    <!-- main -->
+    <div class="container-fluid main_header">
+        <div class="row ">
+            <div class="col-md-12 col-12">
+                <div class="main_content">
+                    <form action="" class="temp_form">
+                        <input type="text" name="" id="cityname" placeholder="Enter your city name" required>
+                        <input type="submit" value="Seacrh" id="submitBtn">
+                    </form>
+                </div>
+
+                <div class="tempInformation w-25">
+                    <div class="top_layer">
+                        <p id="day"></p>
+                        <p id="today_data"></p>
+                    </div>
+                    <div class="main_layer ">
+                        <p id="city_name" class="text-capitalize..">get output here</p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp" class=" font-900"><span style="font-size: 4rem;">Temp</span>° C</p>
+                            <p class="text-white" id="temp_status"><i class="fa fa-cloud text-white"
+                                    style="font-size: 5rem;"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    {{>footer}}
+    <script src="js/main.js"></script>
+    <script>
+        function date(){
+             let day = document.getElementById('day');
+        let date = document.getElementById('today_data');
+
+        let currdate = new Date();
+        let currDate = currdate.toDateString();
+        let currday = currdate.toLocaleTimeString();
+
+        day.innerText = currday;
+        date.innerText = currDate;
+        }
+
+        setInterval(date, 1000);
+       
+    </script>
+</body>
+
+</html>
