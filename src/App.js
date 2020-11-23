@@ -28,5 +28,5 @@ App.get("*",(req , res )=>{
     res.render("404error");
 });
 App.listen(Port, ()=>{
-    console.log("listining to port 8080..");
+    console.log(`Listning to port ${Port}`);
 });
